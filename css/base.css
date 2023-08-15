@@ -24,7 +24,7 @@ h1{
 
 h2{
     font-size: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 20px;
     color: rgba(88, 88, 88, 0.993)
 }
@@ -33,8 +33,9 @@ input{
     border: 2px solid rgba(172, 172, 172, 0.726);
     border-radius: 5px;
     margin: 0px 20px;
-    height: 40px;
+    height: 30px;
     width: 300px;
+    padding: 5px;
 }
 
 a{
@@ -42,9 +43,6 @@ a{
     text-decoration: none;
 }
 
-a:hover{
-    text-decoration: underline;
-}
 
 a>p{
     text-align: end;
@@ -53,6 +51,11 @@ a>p{
     padding-right: 25px;
     color: rgb(62, 125, 167);
 
+}
+
+a>p:hover{
+    color: rgb(109, 149, 175);
+    text-decoration: underline;
 }
 
 button{
@@ -67,4 +70,9 @@ button{
     width: 300px;
     height: 50px;
     margin: 30px auto;
+}
+
+button:hover{
+    background-color: rgb(82, 130, 161);
+    border: 1px solid white;
 }
