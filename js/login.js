@@ -45,7 +45,7 @@ function autenticar(email, senha){
                 alert ("Usuário autenticado com sucesso!")
                 salvarToken(response.token)
                 salvarUsuario(response.usuario)
-                window.open('cadastro-usuário.html', '_self')
+                window.open('cliente.html', '_self')
             }
         })
 }

@@ -1,0 +1,7 @@
+table.table{
+    box-shadow: 0 0 10px 0 rgb(50 50 50 / 85%);
+}
+
+button.btn{
+    min-width: 80px;
+}
