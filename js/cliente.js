@@ -1,5 +1,32 @@
 const url = 'http://localhost:3400/clientes'
+
+let modalCliente =  new bootstrap.Modal(document.getElementById("modal-cliente"), {})
+let btnAdcionar = document.getElementById('adcionar')
+let modoEdicao = false
+let modalTitle = document.querySelector('h4.modal-title')
+
+
 let tabelaCliente = document.querySelector('table>tbody')
+
+btnAdcionar.addEventListener('click', () => {
+    modoEdicao = false
+    modalTitle.textContent = "Adcionar Cliente"
+    modalCliente.show()
+})
+function fecharModal(){
+    modalCliente.hide()
+    modoEdicao = false
+}
+
+function editarCliente(id){
+    modoEdicao = true
+    modalTitle.textContent = "Editar Cliente"
+    modalCliente.show()
+}
+
+function excluirCliente(id){
+    alert('Excluindo o cliente ' + id)
+}
 
 function obterCliente(){
     fetch(url, {
@@ -11,7 +38,6 @@ function obterCliente(){
     })
     .fetch()
 }
-
 function criarLinhaNaTable(cliente){
     let tr = document.createElement('tr')
     let tdId = document.createElement('td')
@@ -47,10 +73,8 @@ function popularTabela(clientes){
     });
 
 }
-function editarCliente(id){
-    alert('Editando o cliente ' + id)
-}
-function excluirCliente(id){
-    alert('Excluindo o cliente ' + id)
-}
+
+
+
+
 obterCliente()

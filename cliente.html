@@ -61,9 +61,7 @@
         <div class="col-sm3">
             <button 
             id="adcionar" 
-            class="btn btn-primary btn-sm"  
-            data-bs-toggle="modal" 
-            data-bs-target="#modal-cliente">
+            class="btn btn-primary btn-sm">
             Adcionar
         </button>
         </div>
@@ -111,12 +109,12 @@
 
                     <div class="col-sm-3">
                         <label for="id" class="form-label">Id</label>
-                        <input type="text" class="form-control" id="">
+                        <input disabled type="text" class="form-control" id="modal-id">
                     </div>
 
                     <div class="col-sm-9">
                         <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="modal-nome">
                     </div> 
                   </div>
                   
@@ -124,17 +122,17 @@
 
                     <div class="col-sm-4">
                         <label for="id" class="form-label">Telefone</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="modal-telefone">
                     </div>
 
                     <div class="col-sm-4">
                         <label for="nome" class="form-label">CPF</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="modal-cpf">
                     </div> 
 
                     <div class="col-sm-4">
                         <label for="genero" class="form-label">Gênero</label>
-                        <select class="col-sm-4 form-select" id="">
+                        <select class="col-sm-4 form-select" id="modal-genero">
                             <option></option>
                             <option>Masculino</option>
                             <option>Feminio</option>
@@ -145,7 +143,7 @@
                   <div class="row mt-3">
                     <div class="col-sm-12">
                         <label for="E-mail" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="">
+                        <input type="email" class="form-control" id="modal-email">
                     </div>
                   </div>
 
@@ -160,8 +158,13 @@
           
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                  <button id="btn-salvar" class="btn btn-primary btn-sm">Salvar</button>
-                  <button id="btn-cancelar" class="btn btn-outline-primary btn-sm">Cancelar</button>
+                  <button id="btn-salvar"
+                   class="btn btn-primary btn-sm"
+                   onclick="adcionarCliente()">Salvar</button>
+
+                  <button id="btn-cancelar" 
+                  class="btn btn-outline-primary btn-sm"
+                  onclick="fecharModal()">Cancelar</button>
                 </div>
           
               </div>
