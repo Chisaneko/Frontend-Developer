@@ -85,7 +85,7 @@ function limparModalCliente(){
 }
 
 function criarLinhaNaTable(cliente){
-    let tr = document.createElement('tr')
+    let tr = document.createElement('td')
     let tdId = document.createElement('td')
     let tdNome = document.createElement('td')
     let tdCpf = document.createElement('td')
